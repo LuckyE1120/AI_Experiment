@@ -1,7 +1,5 @@
 package com.lucky.exp1_1;
 
-import org.junit.Test;
-
 import java.util.Scanner;
 
 public class Main {
