@@ -61,7 +61,7 @@ public class Main {
             return;
         }
 
-        //判断船上最多可以有多少修道士和野人
+        //判断船上最多可以有多少牧师和野人
         int k1,k2;
         if(s.boatStatus == 1){//船在左岸
             k1 = C>=s.leftMonk?s.leftMonk:C;
@@ -77,7 +77,7 @@ public class Main {
             for (int j = 0 ; j <= ((C-m)>=k2?k2:(C-m)) ; j++){
                 int n = j;//n为上船的野人数
                 /**
-                 * tLeftM：表示当前左岸剩余的传道士
+                 * tLeftM：表示当前左岸剩余的牧师
                  * tLeftS：表示当前左岸剩余的野人
                  * tBoatS：表示当前船位于左岸还是右岸
                  */
@@ -132,7 +132,7 @@ public class Main {
         }
 
         /**
-         * 2.第二种不合法情况：左岸或右岸或船上野人数大于传道士数
+         * 2.第二种不合法情况：左岸或右岸或船上野人数大于牧师数
          */
         //左岸
         if (ts.leftMonk != 0 && (ts.leftMonk < ts.leftSavage))
@@ -149,7 +149,7 @@ public class Main {
 
 class status{
 
-    int leftMonk;//左岸传教士数
+    int leftMonk;//左岸牧师数
     int leftSavage;//左岸野人数
     int boatStatus;//船的状态，0-->船在右岸(终点岸) 1-->船在左岸(起始岸)
 
