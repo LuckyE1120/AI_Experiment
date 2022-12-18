@@ -31,15 +31,7 @@ public class Individual {
     {
         return this.fitness;
     }
-    //    public double calcFitness(City[] cities)
-//    {
-//        double distance=0;
-//        for(int gene=0;gene<this.chromosome.length;gene++)
-//            distance+=cities[chromosome[gene]].distanceFrom(
-//                    cities[chromosome[(gene+1)% chromosome.length]]);
-//        this.fitness = 1/distance;
-//        return this.fitness;
-//    }
+
     public void shuffle()
     {
         Random rnd=new Random();

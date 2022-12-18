@@ -42,12 +42,10 @@ public class GeneticAlgorithm {
             populationFitness += individual.getFitness();
         }
 
-//        for(Individual individual:population.getIndividuals())
-//            populationFitness += this.calcFitness(individual,cities);
         double avgFitness = populationFitness/population.size();
         population.setPopulationFitness(avgFitness);
     }
-    public Individual selectParent(Population population)// 锦标赛选择
+    public Individual selectParent(Population population)// 父代选择
     {
         Population tournament = new Population(this.tournamentSize);
         // 打乱 population
@@ -68,7 +66,6 @@ public class GeneticAlgorithm {
         {
             Individual parent1 = population.getFittest(index);
             // 创建空白子代
-//            Individual offspring = new Individual(parent1.getchromosomeLength());
             int[] offspringChromosome = new int[parent1.getChromosomeLength()];
             Arrays.fill(offspringChromosome, -1);
             Individual offspring = new Individual(offspringChromosome);

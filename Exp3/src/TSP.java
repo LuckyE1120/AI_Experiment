@@ -34,16 +34,7 @@ public class TSP {
 //            // Add city
 //            System.out.println("第"+ cityIndex + "个城市坐标为：(" + xPos + "," + yPos + ")");
 //            cities[cityIndex] = new City(xPos, yPos);
-//        }  //当然这个1w城市有点夸张了
-
-//		// loop to create certain cities
-//		 int[][] positions={ {1,2},{3,5},{9,6},{6,3},{53,15},{56,21},{26,18},{28,29},{9,24},{32,18},
-//		 				{43,4},{23,7},{17,20},{30,6},{10,12},{38,20},{99,100},{0,0},{19,27},{56,32}
-//		 				,{0,100},{100,0},{50,50},{12,12},{24,24}};
-//		 City[] cities=new City[positions.length];
-//		 for(int cityIndex=0;cityIndex<positions.length;cityIndex++)
-//		 	cities[cityIndex]=new City(positions[cityIndex][0],positions[cityIndex][1]);
-//		 int numCities = cities.length;
+//        }
 
 
         // Initial GA
@@ -78,9 +69,6 @@ public class TSP {
             // Increment the current generation
             generation++;
 
-//			// sequence of cities--toString
-//			System.out.println("bestroute: ("+population.getFittest(0).toString()+")");
-
             // tolerance times   isTerminated 2
             if(pre_best_distance-route.getDistance() <tolerance)
                 times++;
@@ -97,8 +85,6 @@ public class TSP {
         System.out.println("Best distance: " + route.getDistance());
         System.out.println("route: ("+population.getFittest(0).toString()+")");
         System.out.println("用时"+(double)(System.currentTimeMillis()-startTimes)/1000+"s");
-
-
 
     }
 
